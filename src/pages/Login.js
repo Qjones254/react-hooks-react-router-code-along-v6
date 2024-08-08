@@ -1,11 +1,12 @@
 import React from 'react'
-
+import NavBar from '../components/NavBar';
 // Login.js
 function Login() {
     return (
       <>
         <header>
           {/* Save space for NavBar */}
+          <NavBar/>
         </header>
         <main>
           <h1>Login</h1>

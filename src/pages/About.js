@@ -1,5 +1,5 @@
 import React from 'react'
-
+import NavBar from '../components/NavBar';
 
 // About.js
 function About() {
@@ -7,6 +7,7 @@ function About() {
       <>
         <header>
           {/* Save space for NavBar */}
+          <NavBar/>
         </header>
         <main>
           <h1>This is my about component!</h1>
