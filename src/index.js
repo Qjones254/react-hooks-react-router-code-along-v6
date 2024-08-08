@@ -5,26 +5,28 @@ import { createBrowserRouter,RouterProvider } from "react-router-dom";
 import About from "./pages/About";
 import Login from "./pages/Login";
 import UserProfile from "./components/UserProfile";
-
-const router= createBrowserRouter([
+import ErrorPage from "./pages/ErrorPage";
+const router = createBrowserRouter([
     {
-        path:'/',
-        element:<Home/>
+      path: "/",
+      element: <Home />,
+      errorElement: <ErrorPage />
+    }, 
+    {
+      path: "/about",
+      element: <About />,
+      errorElement: <ErrorPage />
     },
     {
-        path:'/about',
-        element:<About/>
-    },
-    
-    {
-        path:'/login',
-        element:<Login/>
+      path: "/login",
+      element: <Login />,
+      errorElement: <ErrorPage />
     },
     {
-        path:'/profile/:id',
-        element:<UserProfile/>
+      path: "/profile/:id",
+      element: <UserProfile />,
+      errorElement: <ErrorPage />
     }
-])
-
+  ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<RouterProvider router={router} />);
